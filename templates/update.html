@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>searchlog</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">search</h1>
+
+    <div class="form">
+        <form action="/update/{{task.id}}" method="POST">
+            <input type="number" name="content" id="content" value="{{task.content}}">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</div>
+{% endblock %}
