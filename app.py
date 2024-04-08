@@ -9,7 +9,7 @@ import pytz
 
 # pd.read_csv('data.csv')
 
-GOOGLE_API_KEY="AIzaSyDjzoVQZvqPHgv9mD9dyRXUcQoMXQ1yAmo"
+GOOGLE_API_KEY="key "
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
